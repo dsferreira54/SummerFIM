@@ -22,7 +22,7 @@ for i in allFilesArray:
     with open(i,"rb") as f:
         for byte_block in iter(lambda: f.read(4096),b""):
             sha256_hash.update(byte_block)
-        OutputSha256 = sha256_hash.hexdigest()
-    allFilesReportFile_Object.write(OutputSha256 + ' *' + i + '\n')
-    print(OutputSha256 + ' *' + i)
+        outputSha256 = sha256_hash.hexdigest()
+    allFilesReportFile_Object.write(outputSha256 + ' *' + i + '\n')
+    print(outputSha256 + ' *' + i)
 allFilesReportFile_Object.close()
