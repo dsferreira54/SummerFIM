@@ -2,15 +2,15 @@ import os, fnmatch
 import hashlib
 
 # VARIABLES 
-path = 'F:\Documentos\Virtual Machines'
-path = 'F:\\'
+path = 'C:\\Users\David S. Ferreira\\Documents\\Teste'
+# path = 'F:\\'
 allFilesReportFile = 'C:\\Users\\David S. Ferreira\\workdir\\VyramFIM\\allFilesReportFile.sha2'
 pattern = '*'
 allFilesArray = []
 errorCounter = 0
 currentIndexAllFilesArray = 0
 
-# TEXT CUSTOM
+# CUSTOM TEXT
 HEADER = '\033[95m'
 OKBLUE = '\033[94m'
 OKCYAN = '\033[96m'
@@ -28,7 +28,6 @@ for dName, sdName, fList in os.walk(path):
             allFilesArray.append(os.path.join(dName, fileName))
 allFilesArray = sorted(allFilesArray)
 allFilesArrayLenght = len(allFilesArray)
-print(allFilesArrayLenght)
 
 # WRITING ALL FILES ARRAY IN A TXT FILE CALLED ALL FILES REPORT FILE (AFRF)
 allFilesReportFile_Object = open(allFilesReportFile, 'a', encoding="utf-8")
@@ -47,9 +46,9 @@ for i in allFilesArray:
         permissionErrorException = True
     if permissionErrorException == False:
         allFilesReportFile_Object.write(outputSha256 + ' *' + i + '\n')
-        print(BOLD + "[ " + OKGREEN + str(currentIndexAllFilesArray) + '/' + str(allFilesArrayLenght) + ENDC + " ]   " + ENDC + outputSha256 + ' *' + i)
+        print(BOLD + "[ " + OKGREEN + str(currentIndexAllFilesArray) + '/' + str(allFilesArrayLenght) + ENDC + " ] " + ENDC + outputSha256 + ' *' + i)
 allFilesReportFile_Object.close()
 
 # SHOWING OPERATION RESULTS
 print('')
-print(errorCounter)
+print("A operação terminou com " + str(errorCounter) + " erros.")
