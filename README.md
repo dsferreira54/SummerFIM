@@ -1,2 +1,2 @@
-# VyramFIM
-VyramFIM is a simple File Integrity Monitor (FIM) coded in Python.
+# SummerFIM
+SummerFIM is a simple File Integrity Monitor (FIM) coded in Python.
