@@ -6,8 +6,6 @@ class ScanPath:
         path = str(path_to_scan)
         pattern = '*'
         allFilesArray = []
-        errorCounter = 0
-        currentIndexAllFilesArray = 0
 
         for dName, sdName, fList in os.walk(path):
             for fileName in fList:
