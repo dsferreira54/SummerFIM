@@ -1,5 +1,4 @@
 import os, fnmatch
-import hashlib
 import yaml
 
 class ScanPath:
