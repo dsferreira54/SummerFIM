@@ -2,8 +2,8 @@ import os, fnmatch
 import yaml
 
 class ScanPath:
-    def scan(path_to_scan):
-        path = str(path_to_scan)
+    def scan(pathToScan):
+        path = str(pathToScan)
         pattern = '*'
         allFilesArray = []
 
