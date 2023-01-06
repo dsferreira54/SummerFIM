@@ -1,17 +1,14 @@
 import os, fnmatch
 import yaml
 
-class ScanSettingsYaml:
-    def scan():
-        yamlFilepath = r"app/settings/settings.yaml"
-
+class Scan:
+    def yaml(yamlFilepath):
         with open(yamlFilepath) as yamlFile: 
             yamlArray = yaml.safe_load(yamlFile)
 
-            return yamlArray
+        return yamlArray
 
-class ScanPath:
-    def scan(pathToScan):
+    def path(pathToScan):
         path = str(pathToScan)
         pattern = '*'
         filesListArray = []
@@ -24,6 +21,12 @@ class ScanPath:
 
         return filesListArray
 
-class ScanHashFile:
-    def importFileDataInArray():
-        return #importHashFile #todo
+    def textFile(path):
+        textFileObject = open(path, encoding="utf-8")
+        textFileArray = [i[:-1] for i in textFileObject.readlines()]
+
+        textFileObject.close()
+
+        textFileArray = sorted(textFileArray)
+
+        return textFileArray

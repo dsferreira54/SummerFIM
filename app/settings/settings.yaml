@@ -1,3 +1,2 @@
-pathToScan: "/home/david/Pictures/Screenshots"
-filesListWithHashTextFilePath: "app/data/hash_file.sha2"
-filesListWithHashTextFilePathBackup: "app/data/hash_file_backup.sha2"
+pathToScan: "YOUR PATH HERE"
+filesListWithHashesTextFilePath: "app/data/hash_file.sha2"
