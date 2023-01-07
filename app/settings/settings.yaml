@@ -1,0 +1,2 @@
+pathToScan: "PUT HERE THE PATH YOU WANT TO MONITOR"
+filesListWithHashesTextFilePath: "app/data/hash_file.sha2"
